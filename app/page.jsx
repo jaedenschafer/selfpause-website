@@ -8,7 +8,7 @@ const voices = [
 ];
 
 const sessions = [
-  { title: 'Millionaire Mindset', image: 'https://images.unsplash.com/photo-1553729459-uj4a56c6dc0b?w=400&q=80' },
+  { title: 'Millionaire Mindset', image: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=400&q=80' },
   { title: 'Manifesting Success', image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&q=80' },
   { title: 'Athletic Mindset', image: 'https://images.unsplash.com/photo-1517963879433-6ad2b056d712?w=400&q=80' },
   { title: "Children's Confidence", image: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&q=80' },

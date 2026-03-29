@@ -1,85 +1,100 @@
 import Link from 'next/link';
 
-const categories = [
-  { label: 'Build confidence', href: '/affirmations' },
-  { label: 'Reduce stress or anxiety', href: '/affirmations' },
-  { label: 'Better sleep', href: '/affirmations' },
-  { label: 'Record your own affirmations', href: '/affirmations' },
-  { label: 'Something else', href: '/affirmations' },
-];
-
-const appScreens = [
-  {
-    title: 'Record',
-    description: 'Create personalized affirmations in your own voice',
-    image: 'https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=400&q=80',
-    bg: 'bg-navy-900',
-    textColor: 'text-white',
-  },
-  {
-    title: 'Listen',
-    description: 'Browse thousands of guided affirmation sessions',
-    image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=400&q=80',
-    bg: 'bg-white',
-    textColor: 'text-navy-900',
-  },
-  {
-    title: 'Meditate',
-    description: 'Layer with ambient sounds and meditation music',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80',
-    bg: 'bg-navy-900',
-    textColor: 'text-white',
-  },
-];
-
 const features = [
   {
-    title: 'AI Life Coach',
-    description: 'Problem-solve, set goals, and overcome limiting beliefs with an AI coach available 24/7.',
-    image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80',
+    title: 'AI Life Coach Chat',
+    description: 'An AI life coach in your pocket, anonymous, secure and available 24/7.',
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+      </svg>
+    ),
+  },
+  {
+    title: 'Self-Recorded Affirmations',
+    description: 'Record unlimited personalized affirmations that are backed up to the cloud.',
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/>
+        <path d="M19 10v2a7 7 0 01-14 0v-2"/>
+        <line x1="12" y1="19" x2="12" y2="23"/>
+        <line x1="8" y1="23" x2="16" y2="23"/>
+      </svg>
+    ),
   },
   {
     title: 'Guided Affirmations',
-    description: 'Over 1,000 professionally recorded affirmation sessions across every category.',
-    image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80',
+    description: "Listen to 1,000's of affirmations in our guided affirmation sessions.",
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M3 18v-6a9 9 0 0118 0v6"/>
+        <path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"/>
+      </svg>
+    ),
   },
   {
-    title: 'Ambient Sounds',
-    description: 'Full library of HD nature sounds and meditation music for deep relaxation.',
-    image: 'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=600&q=80',
-  },
-  {
-    title: 'Smart Reminders',
-    description: 'Uplifting notifications designed to arrive at the right moment throughout your day.',
-    image: 'https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600&q=80',
-  },
-  {
-    title: 'Mindset Quiz',
-    description: 'Personalized affirmation recommendations based on your goals and mindset profile.',
-    image: 'https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?w=600&q=80',
-  },
-  {
-    title: '5 Languages',
-    description: 'Access affirmations in English, Spanish, French, German, and Portuguese.',
-    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80',
+    title: 'Ambient Sounds & Music',
+    description: 'Get the full library of ambient sounds and music to layer with your affirmations.',
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M9 18V5l12-2v13"/>
+        <circle cx="6" cy="18" r="3"/>
+        <circle cx="18" cy="16" r="3"/>
+      </svg>
+    ),
   },
 ];
 
-const testimonials = [
+const sessions = [
+  { title: 'Millionaire Mindset', image: 'https://images.unsplash.com/photo-1553729459-uj4a56c6dc0b?w=400&q=80' },
+  { title: 'Manifesting Success', image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&q=80' },
+  { title: 'Athletic Mindset', image: 'https://images.unsplash.com/photo-1517963879433-6ad2b056d712?w=400&q=80' },
+  { title: "Children's Confidence", image: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&q=80' },
+];
+
+const steps = [
   {
-    text: "Selfpause changed my morning routine completely. Recording my own affirmations and hearing them back hits different than any pre-recorded app.",
-    name: "Sarah M.",
-    role: "Teacher",
+    title: 'Write',
+    description: 'Create and write your own personal affirmations',
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/>
+        <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/>
+      </svg>
+    ),
   },
   {
-    text: "The AI coach helped me work through serious imposter syndrome. Having something available at 3am when my anxiety peaks is invaluable.",
-    name: "James K.",
-    role: "Software Engineer",
+    title: 'Record',
+    description: 'Record your affirmations in your own voice',
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/>
+        <path d="M19 10v2a7 7 0 01-14 0v-2"/>
+        <line x1="12" y1="19" x2="12" y2="23"/>
+        <line x1="8" y1="23" x2="16" y2="23"/>
+      </svg>
+    ),
   },
   {
-    text: "I've tried every affirmation app out there. Selfpause is the only one where I actually stuck with it. The ambient sounds make it feel like real meditation.",
-    name: "Priya L.",
-    role: "Yoga Instructor",
+    title: 'Layer',
+    description: 'Layer ambient sounds and music in the background',
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+        <polyline points="2 17 12 22 22 17"/>
+        <polyline points="2 12 12 17 22 12"/>
+      </svg>
+    ),
+  },
+  {
+    title: 'Visualize',
+    description: 'Listen to and visualize your affirmations in action',
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+        <circle cx="12" cy="12" r="3"/>
+      </svg>
+    ),
   },
 ];
 
@@ -87,58 +102,140 @@ export default function HomePage() {
   return (
     <>
       {/* ============================================================
-          HERO SECTION — Nature background with glassmorphism card
+          HERO — AI Life Coach
           ============================================================ */}
       <section className="relative min-h-screen overflow-hidden">
-        {/* Nature background */}
         <div className="absolute inset-0 bg-hero-nature" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-cream-100" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/5 to-cream-100" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 lg:pt-36 pb-20 lg:pb-32">
-          {/* Glass card */}
-          <div className="glass-card rounded-3xl p-8 lg:p-12 max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-              {/* Phone mockup — real app screenshot */}
-              <div className="flex justify-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left — Copy */}
+            <div className="text-center lg:text-left">
+              <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+                Empower Yourself with an{' '}
+                <span className="brand-gradient-text">AI Life Coach</span>
+              </h1>
+              <p className="text-lg lg:text-xl text-white/85 max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed">
+                Problem-solve, set goals and overcome limiting beliefs with an AI Life Coach that harnesses the power of affirmations and meditation.
+              </p>
+              <a
+                href="https://apps.apple.com/us/app/selfpause-daily-affirmations/id1518538414"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary text-lg px-10 py-4"
+              >
+                Start your affirmation journey
+              </a>
+            </div>
+
+            {/* Right — Phone */}
+            <div className="flex justify-center">
+              <img
+                src="/images/selfpause-phone.png"
+                alt="Selfpause app showing morning affirmations, ambient sounds, and meditation music"
+                className="w-72 lg:w-96 drop-shadow-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================
+          FEATURES — 4 cards
+          ============================================================ */}
+      <section className="section-padding bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((f) => (
+              <div key={f.title} className="text-center p-6 rounded-2xl hover:bg-cream-100 transition-colors">
+                <div className="w-14 h-14 rounded-xl brand-gradient text-white flex items-center justify-center mx-auto mb-5">
+                  {f.icon}
+                </div>
+                <h3 className="text-lg font-bold text-navy-900 mb-2" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+                  {f.title}
+                </h3>
+                <p className="text-navy-500 text-sm leading-relaxed">
+                  {f.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================
+          SESSIONS — Browse affirmation categories
+          ============================================================ */}
+      <section className="section-padding bg-cream-100">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <h2 className="text-3xl lg:text-5xl font-bold text-navy-900 mb-5" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+              Listen to new affirmation sessions for every area of your life
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            {sessions.map((s) => (
+              <div key={s.title} className="group cursor-pointer">
+                <div className="aspect-square rounded-2xl overflow-hidden shadow-md mb-4">
+                  <img
+                    src={s.image}
+                    alt={s.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <h3 className="text-center font-semibold text-navy-800 group-hover:text-teal-500 transition-colors">
+                  {s.title}
+                </h3>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <a
+              href="https://apps.apple.com/us/app/selfpause-daily-affirmations/id1518538414"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary text-lg px-10 py-4"
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================
+          TROY POLAMALU TESTIMONIAL
+          ============================================================ */}
+      <section className="relative py-20 lg:py-28 overflow-hidden">
+        <div className="absolute inset-0 bg-ocean" />
+        <div className="absolute inset-0 bg-navy-900/60" />
+
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+            {/* Troy image */}
+            <div className="flex-shrink-0">
+              <div className="w-40 h-40 lg:w-52 lg:h-52 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl">
                 <img
-                  src="/images/selfpause-phone.png"
-                  alt="Selfpause app showing morning affirmations, ambient sounds, and meditation music"
-                  className="w-72 lg:w-80 drop-shadow-2xl"
+                  src="/images/troy-removebg.png"
+                  alt="Troy Polamalu"
+                  className="w-full h-full object-cover"
                 />
               </div>
+            </div>
 
-              {/* Category selection */}
+            {/* Quote */}
+            <div className="text-center lg:text-left">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="white" opacity="0.3" className="mb-4 mx-auto lg:mx-0">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+              </svg>
+              <blockquote className="text-xl lg:text-2xl text-white font-medium leading-relaxed mb-6" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+                I&apos;m so glad I discovered Selfpause. I&apos;m always working to help athletes elevate their game&hellip; these affirmations help.
+              </blockquote>
               <div>
-                <h1 className="text-4xl lg:text-5xl font-bold text-navy-900 mb-8" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
-                  How can we help?
-                </h1>
-
-                <div className="flex flex-col gap-3">
-                  {categories.map((cat) => (
-                    <Link
-                      key={cat.label}
-                      href={cat.href}
-                      className="category-card group"
-                    >
-                      <span className="text-lg font-medium text-navy-800 group-hover:text-navy-900">
-                        {cat.label}
-                      </span>
-                      <svg
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="text-navy-300 group-hover:text-teal-500 group-hover:translate-x-1 transition-all"
-                      >
-                        <polyline points="9 18 15 12 9 6" />
-                      </svg>
-                    </Link>
-                  ))}
-                </div>
+                <div className="text-white font-bold text-lg">Troy Polamalu</div>
+                <div className="text-white/60">2020 Pro Football Hall of Fame</div>
               </div>
             </div>
           </div>
@@ -146,41 +243,33 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          AFFIRMATIONS SECTION — 3 phone mockups
+          HOW IT WORKS — Write, Record, Layer, Visualize
           ============================================================ */}
-      <section className="section-padding bg-cream-100">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-navy-900 mb-5" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
-              Affirmations
+      <section className="section-padding bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <h2 className="text-3xl lg:text-5xl font-bold text-navy-900 mb-5" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+              Create and record your own personalized affirmations
             </h2>
-            <p className="text-lg text-navy-500 leading-relaxed">
-              Record personalized affirmations in your own voice, listen to over 1,000 guided sessions,
-              and meditate with ambient sounds — all in one app built for your mindset.
-            </p>
           </div>
 
-          {/* 3 Phone mockups */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {appScreens.map((screen) => (
-              <div key={screen.title} className="flex flex-col items-center">
-                <div className={`relative w-56 h-[440px] rounded-[2.5rem] ${screen.bg} shadow-xl overflow-hidden border-4 ${screen.bg === 'bg-white' ? 'border-cream-300' : 'border-navy-700'}`}>
-                  <div className="absolute inset-2 rounded-[2rem] overflow-hidden">
-                    <img
-                      src={screen.image}
-                      alt={screen.title}
-                      className="w-full h-2/3 object-cover"
-                    />
-                    <div className={`p-4 ${screen.bg === 'bg-white' ? 'bg-white' : 'bg-navy-900'}`}>
-                      <h3 className={`text-lg font-bold mb-1 ${screen.textColor}`}>
-                        {screen.title}
-                      </h3>
-                      <p className={`text-sm ${screen.bg === 'bg-white' ? 'text-navy-400' : 'text-white/60'}`}>
-                        {screen.description}
-                      </p>
-                    </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {steps.map((step, i) => (
+              <div key={step.title} className="text-center group">
+                <div className="relative mb-6">
+                  <div className="w-16 h-16 rounded-2xl brand-gradient text-white flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform">
+                    {step.icon}
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-navy-900 text-white text-xs font-bold flex items-center justify-center">
+                    {i + 1}
                   </div>
                 </div>
+                <h3 className="text-xl font-bold text-navy-900 mb-2" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+                  {step.title}
+                </h3>
+                <p className="text-navy-500 text-sm leading-relaxed">
+                  {step.description}
+                </p>
               </div>
             ))}
           </div>
@@ -188,135 +277,59 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          FEATURES GRID — Card-based feature showcase
+          SOCIAL PROOF — Rating + "Hear how Selfpause is changing lives"
           ============================================================ */}
       <section className="section-padding bg-cream-100">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-navy-900 mb-5" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
-              Everything you need
-            </h2>
-            <p className="text-lg text-navy-500 leading-relaxed">
-              Selfpause combines AI coaching, personalized affirmations, and meditation into
-              one powerful app designed to transform your daily mindset.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((feature) => (
-              <div key={feature.title} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 group">
-                <div className="aspect-[16/10] overflow-hidden">
-                  <img
-                    src={feature.image}
-                    alt={feature.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-navy-900 mb-2" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
-                    {feature.title}
-                  </h3>
-                  <p className="text-navy-500 text-sm leading-relaxed">
-                    {feature.description}
-                  </p>
-                </div>
-              </div>
+        <div className="max-w-3xl mx-auto text-center">
+          {/* Star rating */}
+          <div className="flex items-center justify-center gap-1 mb-4">
+            {Array.from({ length: 5 }).map((_, j) => (
+              <svg key={j} width="28" height="28" viewBox="0 0 24 24" fill="#f59e0b">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
             ))}
           </div>
-        </div>
-      </section>
+          <p className="text-navy-500 font-medium mb-10">Rated 5 out of 5</p>
 
-      {/* ============================================================
-          ENGAGEMENT SECTION — Ocean background with stats
-          ============================================================ */}
-      <section className="relative py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-ocean" />
-        <div className="absolute inset-0 bg-navy-900/40" />
-
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-5" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
-            An app you&apos;ll use again and again
-          </h2>
-          <p className="text-lg text-white/80 max-w-2xl mx-auto mb-16 leading-relaxed">
-            Wellness means different things to different people. With a focus on personalization
-            and choice, Selfpause helps you build a practice that actually sticks.
-          </p>
-
-          {/* Stats grid */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { stat: '100K+', label: 'Downloads' },
-              { stat: '4.8', label: 'App Store Rating' },
-              { stat: '1,000+', label: 'Guided Sessions' },
-              { stat: '5', label: 'Languages' },
-            ].map((item) => (
-              <div key={item.label} className="glass-card rounded-2xl p-6">
-                <div className="text-3xl lg:text-4xl font-bold text-white mb-1" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
-                  {item.stat}
-                </div>
-                <div className="text-sm text-white/70">{item.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================================
-          TESTIMONIALS
-          ============================================================ */}
-      <section className="section-padding bg-cream-100">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-navy-900 mb-5" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
-              Loved by thousands
-            </h2>
-            <p className="text-lg text-navy-500">
-              Real people, real transformations.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((t, i) => (
-              <div key={i} className="bg-white rounded-2xl p-8 shadow-sm">
-                {/* Stars */}
-                <div className="flex gap-1 mb-4">
-                  {Array.from({ length: 5 }).map((_, j) => (
-                    <svg key={j} width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b">
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                    </svg>
-                  ))}
-                </div>
-                <p className="text-navy-600 leading-relaxed mb-6">&ldquo;{t.text}&rdquo;</p>
-                <div>
-                  <div className="font-semibold text-navy-900">{t.name}</div>
-                  <div className="text-sm text-navy-400">{t.role}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================================
-          FINAL CTA
-          ============================================================ */}
-      <section className="py-24 lg:py-32 bg-cream-100">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold text-navy-900 mb-5" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
-            Join 100,000+ people today to improve your mindset
+          <h2 className="text-3xl lg:text-5xl font-bold text-navy-900 mb-6" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+            Hear how Selfpause is changing lives
           </h2>
           <p className="text-lg text-navy-500 max-w-xl mx-auto mb-10 leading-relaxed">
-            Build out your own, personalized and effective affirmation practice
-            right here on Selfpause today. For free.
+            Join over 100,000 people who are building confidence, reducing anxiety, and transforming their mindset with Selfpause.
           </p>
-          <a
-            href="https://apps.apple.com/us/app/selfpause-daily-affirmations/id1518538414"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary text-lg px-12 py-4"
-          >
-            Get Started
-          </a>
+        </div>
+      </section>
+
+      {/* ============================================================
+          FINAL CTA — Unlock Premium
+          ============================================================ */}
+      <section className="relative py-24 lg:py-32 overflow-hidden">
+        <div className="absolute inset-0 brand-gradient" />
+        <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-5" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+            Unlock Selfpause Premium
+          </h2>
+          <p className="text-lg text-white/80 max-w-xl mx-auto mb-10 leading-relaxed">
+            Get unlimited access to AI coaching, all guided sessions, self-recording tools, and the full ambient sound library.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="https://apps.apple.com/us/app/selfpause-daily-affirmations/id1518538414"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-10 py-4 bg-white text-teal-600 font-semibold rounded-full text-lg hover:bg-cream-100 transition-colors shadow-lg"
+            >
+              Get Started Free
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.app.selfpause"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-10 py-4 text-white/90 font-semibold rounded-full text-lg border-2 border-white/30 hover:border-white/60 transition-colors"
+            >
+              Get it on Android
+            </a>
+          </div>
         </div>
       </section>
     </>

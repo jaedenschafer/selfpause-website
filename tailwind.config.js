@@ -7,6 +7,36 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        cream: {
+          50: '#FEFCF9',
+          100: '#FAF8F5',
+          200: '#F5F0EB',
+          300: '#EDE6DD',
+        },
+        navy: {
+          50: '#f0f1f5',
+          100: '#d1d3de',
+          200: '#a3a7bd',
+          300: '#74799c',
+          400: '#464c7b',
+          500: '#2d3359',
+          600: '#1e2244',
+          700: '#181c38',
+          800: '#12152c',
+          900: '#0c0e1f',
+        },
+        teal: {
+          50: '#e6faf5',
+          100: '#b3f0e0',
+          200: '#80e6cc',
+          300: '#4ddcb7',
+          400: '#26d3a6',
+          500: '#14b892',
+          600: '#0fa37f',
+          700: '#0b8d6c',
+          800: '#087859',
+          900: '#055240',
+        },
         brand: {
           50: '#f5f3ff',
           100: '#ede9fe',
@@ -51,6 +81,7 @@ module.exports = {
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
         display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+        serif: ['Georgia', 'Cambria', 'Times New Roman', 'serif'],
       },
       fontSize: {
         '5xl': ['3rem', { lineHeight: '1.15', letterSpacing: '-0.02em' }],

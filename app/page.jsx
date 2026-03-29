@@ -1,10 +1,10 @@
 import Link from 'next/link';
 
 const voices = [
-  { name: 'Ella', label: 'Calm & Gentle', image: '/images/voice-ella.webp', sample: '/audio/voice-ella.mp3' },
-  { name: 'Troy', label: 'Warm & Confident', image: '/images/voice-troy.webp', sample: '/audio/voice-troy.mp3' },
-  { name: 'Leo', label: 'Energetic & Bold', image: '/images/voice-leo.webp', sample: '/audio/voice-leo.mp3' },
-  { name: 'Olivia', label: 'Soft & Soothing', image: '/images/voice-olivia.webp', sample: '/audio/voice-olivia.mp3' },
+  { name: 'Ella', label: 'Calm & Gentle', image: '/images/voice-ella.webp' },
+  { name: 'Troy', label: 'Warm & Confident', image: '/images/voice-troy.webp' },
+  { name: 'Leo', label: 'Energetic & Bold', image: '/images/voice-leo.webp' },
+  { name: 'Olivia', label: 'Soft & Soothing', image: '/images/voice-olivia.webp' },
 ];
 
 const sessions = [
@@ -208,13 +208,7 @@ export default function HomePage() {
                 <h3 className="text-lg font-bold text-navy-900 mb-1" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
                   {v.name}
                 </h3>
-                <p className="text-navy-400 text-sm mb-3">{v.label}</p>
-                {/* Audio player — wired up for MP3 samples */}
-                <div className="flex items-center justify-center">
-                  <audio controls preload="none" className="w-full max-w-[180px] h-8" style={{ filter: 'sepia(20%) saturate(70%) grayscale(0) brightness(100%)' }}>
-                    <source src={v.sample} type="audio/mpeg" />
-                  </audio>
-                </div>
+                <p className="text-navy-400 text-sm">{v.label}</p>
               </div>
             ))}
           </div>

@@ -73,9 +73,9 @@ export default function HomePage() {
                   href="https://play.google.com/store/apps/details?id=com.app.selfpause"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/80 hover:text-white font-medium transition-colors"
+                  className="inline-flex items-center justify-center px-10 py-4 text-white font-semibold rounded-full text-lg border-2 border-white/30 hover:border-white/60 transition-colors"
                 >
-                  Also on Android &rarr;
+                  Get it on Android
                 </a>
               </div>
             </div>
@@ -298,7 +298,7 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="btn-primary text-lg px-10 py-4"
             >
-              Browse All Sessions
+              Start Recording Free
             </a>
           </div>
         </div>
@@ -545,7 +545,7 @@ export default function HomePage() {
           {/* App Store link */}
           <div className="text-center">
             <a
-              href="https://apps.apple.com/us/app/selfpause-your-ai-life-coach/id1518538414"
+              href="https://apps.apple.com/us/app/selfpause-daily-affirmations/id1518538414"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-white/60 hover:text-white transition-colors text-sm"
@@ -579,7 +579,7 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-10 py-4 bg-white text-teal-600 font-semibold rounded-full text-lg hover:bg-cream-100 transition-colors shadow-lg"
             >
-              Get Started Free
+              Start Recording Free
             </a>
             <a
               href="https://play.google.com/store/apps/details?id=com.app.selfpause"

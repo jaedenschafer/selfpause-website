@@ -38,10 +38,10 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Right side: Login + CTA */}
+          {/* Right side: Login + Download + Store Badges */}
           <div className="hidden md:flex items-center gap-4">
             <a
-              href="https://apps.apple.com/us/app/selfpause-daily-affirmations/id1518538414"
+              href="https://app.selfpause.com/login"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm font-medium text-navy-600 hover:text-teal-500 transition-colors"
@@ -49,12 +49,36 @@ export default function Header() {
               Login
             </a>
             <a
-              href="https://apps.apple.com/us/app/selfpause-daily-affirmations/id1518538414"
+              href="https://onelink.to/selfpause"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary text-sm px-5 py-2.5"
             >
-              Get the App
+              Download
+            </a>
+            <a
+              href="https://apps.apple.com/us/app/selfpause-your-ai-life-coach/id1518538414"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-opacity hover:opacity-80"
+            >
+              <img
+                src="/images/badge-app-store.svg"
+                alt="Download on the App Store"
+                className="h-9 w-auto"
+              />
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.app.selfpause&hl=en_US"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-opacity hover:opacity-80"
+            >
+              <img
+                src="/images/badge-google-play.png"
+                alt="Get it on Google Play"
+                className="h-9 w-auto"
+              />
             </a>
           </div>
 
@@ -90,15 +114,48 @@ export default function Header() {
                   {link.label}
                 </Link>
               ))}
-              <div className="mt-4 px-4">
+              <a
+                href="https://app.selfpause.com/login"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileOpen(false)}
+                className="px-4 py-3 text-base font-medium text-navy-700 hover:text-teal-500 hover:bg-cream-100 rounded-xl transition-colors"
+              >
+                Login
+              </a>
+              <div className="mt-4 px-4 flex flex-col gap-3">
                 <a
-                  href="https://apps.apple.com/us/app/selfpause-daily-affirmations/id1518538414"
+                  href="https://onelink.to/selfpause"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary w-full text-center"
                 >
-                  Get the App
+                  Download
                 </a>
+                <div className="flex items-center justify-center gap-3">
+                  <a
+                    href="https://apps.apple.com/us/app/selfpause-your-ai-life-coach/id1518538414"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="/images/badge-app-store.svg"
+                      alt="Download on the App Store"
+                      className="h-10 w-auto"
+                    />
+                  </a>
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.app.selfpause&hl=en_US"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="/images/badge-google-play.png"
+                      alt="Get it on Google Play"
+                      className="h-10 w-auto"
+                    />
+                  </a>
+                </div>
               </div>
             </nav>
           </div>

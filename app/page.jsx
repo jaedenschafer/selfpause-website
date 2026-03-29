@@ -40,9 +40,9 @@ const steps = [
 export default function HomePage() {
   return (
     <>
-      {/* =============================================================
+      {/* ============================================================
           HERO — Record & Listen to Personal Affirmations
-          ============================================================= */}
+          ============================================================ */}
       <section className="relative min-h-screen overflow-hidden">
         <div className="absolute inset-0 bg-hero-nature" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/5 to-cream-100" />
@@ -92,9 +92,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* =============================================================
+      {/* ============================================================
           HOW IT WORKS — Write, Record, Layer, Visualize
-          ============================================================= */}
+          ============================================================ */}
       <section className="section-padding bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-14">
@@ -134,9 +134,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* =============================================================
+      {/* ============================================================
           WHY YOUR OWN VOICE — Science-backed
-          ============================================================= */}
+          ============================================================ */}
       <section className="section-padding bg-cream-100">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -180,9 +180,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* =============================================================
+      {/* ============================================================
           VOICE SAMPLES — Listen to our guided voices
-          ============================================================= */}
+          ============================================================ */}
       <section className="section-padding bg-white">
         <div className="max-w-4xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-14">
@@ -221,9 +221,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* =============================================================
+      {/* ============================================================
           CUSTOM BACKGROUNDS — Sounds & Music
-          ============================================================= */}
+          ============================================================ */}
       <section className="section-padding bg-cream-100">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -265,9 +265,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* =============================================================
+      {/* ============================================================
           SESSIONS — Browse guided affirmation categories
-          ============================================================= */}
+          ============================================================ */}
       <section className="section-padding bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-14">
@@ -310,9 +310,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* =============================================================
+      {/* ============================================================
           TROY POLAMALU TESTIMONIAL
-          ============================================================= */}
+          ============================================================ */}
       <section className="relative py-20 lg:py-28 overflow-hidden">
         <div className="absolute inset-0 bg-ocean" />
         <div className="absolute inset-0 bg-navy-900/60" />
@@ -347,32 +347,228 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* =============================================================
-          SOCIAL PROOF — Rating
-          ============================================================= */}
-      <section className="section-padding bg-cream-100">
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="flex items-center justify-center gap-1 mb-4">
-            {Array.from({ length: 5 }).map((_, j) => (
-              <svg key={j} width="28" height="28" viewBox="0 0 24 24" fill="#f59e0b">
+      {/* ============================================================
+          SOCIAL PROOF — Testimonials & Community
+          ============================================================ */}
+      <section className="relative py-24 lg:py-32 overflow-hidden">
+        {/* Teal gradient background */}
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #0a5e6b 0%, #0088A8 40%, #00C9B7 100%)' }} />
+
+        {/* Subtle pattern overlay */}
+        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, white 1px, transparent 1px), radial-gradient(circle at 80% 20%, white 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* Badge + Heading */}
+          <div className="text-center mb-16">
+            {/* Voted Best Badge */}
+            <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2.5 mb-8">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#fbbf24">
                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
               </svg>
-            ))}
-          </div>
-          <p className="text-navy-500 font-medium mb-10">Rated 5 out of 5</p>
+              <span className="text-white font-semibold text-sm tracking-wide uppercase">Voted Best Affirmation App</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#fbbf24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
 
-          <h2 className="text-3xl lg:text-5xl font-bold text-navy-900 mb-6" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
-            Hear how Selfpause is changing lives
-          </h2>
-          <p className="text-lg text-navy-500 max-w-xl mx-auto mb-10 leading-relaxed">
-            Join over 100,000 people who are building confidence, reducing anxiety, and transforming their mindset with Selfpause.
-          </p>
+            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-5" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+              Loved by 150,000+ people worldwide
+            </h2>
+            <p className="text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
+              Real reviews from real people whose lives have been transformed through the power of personal affirmations.
+            </p>
+          </div>
+
+          {/* Stats row */}
+          <div className="grid grid-cols-3 max-w-2xl mx-auto mb-16 gap-4">
+            <div className="text-center">
+              <div className="text-4xl lg:text-5xl font-bold text-white mb-1">4.6</div>
+              <div className="flex items-center justify-center gap-0.5 mb-2">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill={i < 4 ? '#fbbf24' : 'none'} stroke={i < 4 ? 'none' : '#fbbf24'} strokeWidth={i < 4 ? 0 : 2}>
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                ))}
+              </div>
+              <div className="text-white/60 text-sm">App Store Rating</div>
+            </div>
+            <div className="text-center border-x border-white/20">
+              <div className="text-4xl lg:text-5xl font-bold text-white mb-1">150K+</div>
+              <div className="text-white/60 text-sm mt-3">Active Users</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl lg:text-5xl font-bold text-white mb-1">84%</div>
+              <div className="text-white/60 text-sm mt-3">5-Star Reviews</div>
+            </div>
+          </div>
+
+          {/* Testimonial cards */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+
+            {/* Review 1 — Aubmaej */}
+            <div className="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-7 hover:bg-white/15 transition-colors">
+              <div className="flex items-center gap-0.5 mb-4">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <svg key={i} width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                ))}
+              </div>
+              <h3 className="text-white font-bold text-lg mb-3">&ldquo;HANDS DOWN the Best Affirmation App&rdquo;</h3>
+              <p className="text-white/75 leading-relaxed text-sm mb-5">
+                Using this app has become such a crucial part of my routine. The app itself is beautifully designed and makes it easy for me to select affirmations based on what I&apos;m wanting to focus on. The voices are both soothing and encouraging, and I love the ability to record my own affirmations. Seriously so grateful for this app!
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center text-white font-bold text-sm">A</div>
+                <div>
+                  <div className="text-white font-semibold text-sm">Aubmaej</div>
+                  <div className="text-white/50 text-xs">Verified App Store Review</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Review 2 — camrylbc */}
+            <div className="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-7 hover:bg-white/15 transition-colors">
+              <div className="flex items-center gap-0.5 mb-4">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <svg key={i} width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                ))}
+              </div>
+              <h3 className="text-white font-bold text-lg mb-3">&ldquo;Pleasant Peace &amp; Meditation&rdquo;</h3>
+              <p className="text-white/75 leading-relaxed text-sm mb-5">
+                Listening to these affirmations is SO AWESOME! It&apos;s amazing how quickly I can feel myself calm down amidst high stress. I shared the app with 4 of my closest family members within one day of using it! The soothing soundscapes are all good quality, and the app itself is well-designed and intuitive.
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center text-white font-bold text-sm">C</div>
+                <div>
+                  <div className="text-white font-semibold text-sm">camrylbc</div>
+                  <div className="text-white/50 text-xs">Verified App Store Review</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Review 3 — BF */}
+            <div className="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-7 hover:bg-white/15 transition-colors">
+              <div className="flex items-center gap-0.5 mb-4">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <svg key={i} width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                ))}
+              </div>
+              <h3 className="text-white font-bold text-lg mb-3">&ldquo;Love this app!&rdquo;</h3>
+              <p className="text-white/75 leading-relaxed text-sm mb-5">
+                I&apos;m enjoying this app a lot. I can record my affirmations and have a good selection of sounds to pair with them. It&apos;s become a key part of my daily routine for building a positive mindset and staying focused on my goals throughout the day.
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center text-white font-bold text-sm">B</div>
+                <div>
+                  <div className="text-white font-semibold text-sm">BF</div>
+                  <div className="text-white/50 text-xs">Verified App Store Review</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Review 4 — DuhSosanator */}
+            <div className="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-7 hover:bg-white/15 transition-colors">
+              <div className="flex items-center gap-0.5 mb-4">
+                {Array.from({ length: 4 }).map((_, i) => (
+                  <svg key={i} width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                ))}
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" strokeWidth="2">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              </div>
+              <h3 className="text-white font-bold text-lg mb-3">&ldquo;Absolutely perfect for what it does&rdquo;</h3>
+              <p className="text-white/75 leading-relaxed text-sm mb-5">
+                This thing is absolutely perfect for what it does, especially with the new additions to the affirmation recordings. A must-have for anyone serious about building a daily affirmation practice and improving their mindset.
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center text-white font-bold text-sm">D</div>
+                <div>
+                  <div className="text-white font-semibold text-sm">DuhSosanator</div>
+                  <div className="text-white/50 text-xs">Verified App Store Review</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Review 5 — Loren-Li */}
+            <div className="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-7 hover:bg-white/15 transition-colors">
+              <div className="flex items-center gap-0.5 mb-4">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <svg key={i} width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                ))}
+              </div>
+              <h3 className="text-white font-bold text-lg mb-3">&ldquo;Amazing customer service&rdquo;</h3>
+              <p className="text-white/75 leading-relaxed text-sm mb-5">
+                The CEO personally reached out and resolved my issue within days. They even offered me a lifetime membership. Customer service is outstanding and I now have access to all the features the app offers. You can tell this team truly cares.
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center text-white font-bold text-sm">L</div>
+                <div>
+                  <div className="text-white font-semibold text-sm">Loren-Li</div>
+                  <div className="text-white/50 text-xs">Verified App Store Review</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Community CTA card */}
+            <div className="bg-white/20 backdrop-blur-sm border border-white/25 rounded-2xl p-7 flex flex-col items-center justify-center text-center">
+              <div className="w-16 h-16 rounded-full bg-white/15 flex items-center justify-center mb-5">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <div className="text-3xl font-bold text-white mb-2">Join 150K+</div>
+              <p className="text-white/70 text-sm mb-6 leading-relaxed">
+                Be part of our growing community of people transforming their lives, one affirmation at a time.
+              </p>
+              <a
+                href="https://apps.apple.com/us/app/selfpause-daily-affirmations/id1518538414"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-white text-teal-700 font-semibold rounded-full px-6 py-3 text-sm hover:bg-cream-100 transition-colors"
+              >
+                Download Free
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+
+          </div>
+
+          {/* App Store link */}
+          <div className="text-center">
+            <a
+              href="https://apps.apple.com/us/app/selfpause-your-ai-life-coach/id1518538414"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-white/60 hover:text-white transition-colors text-sm"
+            >
+              Read all reviews on the App Store
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+              </svg>
+            </a>
+          </div>
+
         </div>
       </section>
 
-      {/* =============================================================
+      {/* ============================================================
           FINAL CTA — Start Recording
-          ============================================================= */}
+          ============================================================ */}
       <section className="relative py-24 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 brand-gradient" />
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

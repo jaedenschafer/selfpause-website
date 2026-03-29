@@ -56,30 +56,6 @@ export default function Header() {
             >
               Download
             </a>
-            <a
-              href="https://apps.apple.com/us/app/selfpause-your-ai-life-coach/id1518538414"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition-opacity hover:opacity-80"
-            >
-              <img
-                src="/images/badge-app-store.svg"
-                alt="Download on the App Store"
-                className="h-9 w-auto"
-              />
-            </a>
-            <a
-              href="https://play.google.com/store/apps/details?id=com.app.selfpause&hl=en_US"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition-opacity hover:opacity-80"
-            >
-              <img
-                src="/images/badge-google-play.png"
-                alt="Get it on Google Play"
-                className="h-9 w-auto"
-              />
-            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -132,30 +108,6 @@ export default function Header() {
                 >
                   Download
                 </a>
-                <div className="flex items-center justify-center gap-3">
-                  <a
-                    href="https://apps.apple.com/us/app/selfpause-your-ai-life-coach/id1518538414"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="/images/badge-app-store.svg"
-                      alt="Download on the App Store"
-                      className="h-10 w-auto"
-                    />
-                  </a>
-                  <a
-                    href="https://play.google.com/store/apps/details?id=com.app.selfpause&hl=en_US"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="/images/badge-google-play.png"
-                      alt="Get it on Google Play"
-                      className="h-10 w-auto"
-                    />
-                  </a>
-                </div>
               </div>
             </nav>
           </div>

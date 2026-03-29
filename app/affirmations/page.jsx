@@ -180,7 +180,7 @@ export default function AffirmationsPage() {
               },
             ].map((item) => (
               <div key={item.title} className="flex flex-col items-center">
-                <div className="w-14 h-14 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center mb-4">
+                <div className="w-14 h-14 rounded-xl bg-teal-50 text-teal-500 flex items-center justify-center mb-4">
                   {item.icon}
                 </div>
                 <h3 className="text-lg font-display font-semibold text-gray-900 mb-2">{item.title}</h3>
@@ -218,7 +218,7 @@ export default function AffirmationsPage() {
                   <ul className="space-y-2">
                     {cat.sample.map((s, i) => (
                       <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-brand-500 mt-0.5 flex-shrink-0">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-teal-500 mt-0.5 flex-shrink-0">
                           <polyline points="20 6 9 17 4 12"/>
                         </svg>
                         <span>&ldquo;{s}&rdquo;</span>
@@ -263,15 +263,16 @@ export default function AffirmationsPage() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-brand-200/30 rounded-full blur-2xl -z-10"/>
+              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-teal-200/30 rounded-full blur-2xl -z-10"/>
             </div>
           </div>
         </div>
       </section>
 
       {/* Final CTA */}
-      <section className="section-padding bg-gradient-to-br from-brand-600 via-brand-700 to-calm-700 text-white">
-        <div className="container-narrow mx-auto text-center">
+      <section className="relative section-padding text-white overflow-hidden">
+        <div className="absolute inset-0 brand-gradient" />
+        <div className="relative container-narrow mx-auto text-center">
           <h2 className="text-3xl lg:text-5xl font-display font-bold mb-6">
             Start your affirmation journey today
           </h2>
@@ -283,7 +284,7 @@ export default function AffirmationsPage() {
               href="https://apps.apple.com/us/app/selfpause-daily-affirmations/id1518538414"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-10 py-4 bg-white text-brand-700 font-semibold rounded-full text-lg hover:bg-gray-50 transition-colors shadow-lg"
+              className="inline-flex items-center justify-center px-10 py-4 bg-white text-teal-700 font-semibold rounded-full text-lg hover:bg-cream-100 transition-colors shadow-lg"
             >
               Download Free
             </a>

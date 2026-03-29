@@ -30,15 +30,11 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2.5 mb-4">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-400 to-calm-400 flex items-center justify-center">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
-                  <path d="M8 12s1.5 2 4 2 4-2 4-2"/>
-                  <circle cx="9" cy="9" r="1" fill="white"/>
-                  <circle cx="15" cy="9" r="1" fill="white"/>
-                </svg>
-              </div>
-              <span className="text-xl font-display font-bold">Selfpause</span>
+              <img
+                src="/images/selfpause-logo.png"
+                alt="Selfpause"
+                className="h-7 w-auto brightness-0 invert"
+              />
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm mb-6">
               Your AI life coach in your pocket. Record personalized affirmations, meditate with ambient sounds, and transform your mindset — anytime, anywhere.

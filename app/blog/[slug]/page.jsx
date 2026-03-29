@@ -30,9 +30,9 @@ export default async function BlogPost({ params }) {
         <div className="max-w-3xl mx-auto">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-sm text-gray-400 mb-8">
-            <Link href="/" className="hover:text-brand-600 transition-colors">Home</Link>
+            <Link href="/" className="hover:text-teal-500 transition-colors">Home</Link>
             <span>/</span>
-            <Link href="/blog" className="hover:text-brand-600 transition-colors">Blog</Link>
+            <Link href="/blog" className="hover:text-teal-500 transition-colors">Blog</Link>
             <span>/</span>
             <span className="text-gray-600">{post.title}</span>
           </div>
@@ -40,7 +40,7 @@ export default async function BlogPost({ params }) {
           {/* Header */}
           <header className="mb-12">
             {post.category && (
-              <span className="inline-block text-sm font-semibold text-brand-600 bg-brand-50 px-4 py-1.5 rounded-full mb-4">
+              <span className="inline-block text-sm font-semibold text-teal-500 bg-teal-50 px-4 py-1.5 rounded-full mb-4">
                 {post.category}
               </span>
             )}
@@ -50,7 +50,7 @@ export default async function BlogPost({ params }) {
             <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500">
               {post.author && (
                 <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 font-semibold text-xs">
+                  <div className="w-8 h-8 rounded-full bg-teal-50 flex items-center justify-center text-teal-500 font-semibold text-xs">
                     {post.author.charAt(0)}
                   </div>
                   <span>{post.author}</span>
@@ -100,7 +100,7 @@ export default async function BlogPost({ params }) {
 
           {/* Back to Blog */}
           <div className="mt-12 pt-8 border-t border-gray-100">
-            <Link href="/blog" className="inline-flex items-center text-brand-600 font-medium hover:text-brand-700 transition-colors">
+            <Link href="/blog" className="inline-flex items-center text-teal-500 font-medium hover:text-teal-600 transition-colors">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
               </svg>

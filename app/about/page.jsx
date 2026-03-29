@@ -90,7 +90,7 @@ export default function AboutPage() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-brand-200/30 rounded-full blur-2xl -z-10"/>
+              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-teal-200/30 rounded-full blur-2xl -z-10"/>
             </div>
             <div>
               <h2 className="text-3xl lg:text-4xl font-display font-bold text-gray-900 mb-6">
@@ -130,7 +130,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {values.map((v) => (
               <div key={v.title} className="flex gap-5 p-8 rounded-2xl bg-white shadow-sm">
-                <div className="w-12 h-12 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-teal-50 text-teal-500 flex items-center justify-center flex-shrink-0">
                   {v.icon}
                 </div>
                 <div>
@@ -154,16 +154,16 @@ export default function AboutPage() {
 
           <div className="relative">
             {/* Vertical line */}
-            <div className="absolute left-6 top-0 bottom-0 w-px bg-brand-200 hidden md:block"/>
+            <div className="absolute left-6 top-0 bottom-0 w-px bg-teal-100 hidden md:block"/>
 
             <div className="space-y-8">
               {milestones.map((m) => (
                 <div key={m.year} className="flex gap-6 items-start">
-                  <div className="w-12 h-12 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center flex-shrink-0 font-display font-bold text-sm relative z-10">
+                  <div className="w-12 h-12 rounded-full bg-teal-50 text-teal-500 flex items-center justify-center flex-shrink-0 font-display font-bold text-sm relative z-10">
                     {m.year.slice(2)}
                   </div>
                   <div className="pt-2">
-                    <span className="text-sm font-semibold text-brand-600">{m.year}</span>
+                    <span className="text-sm font-semibold text-teal-500">{m.year}</span>
                     <p className="text-gray-600 mt-1">{m.text}</p>
                   </div>
                 </div>
@@ -174,8 +174,9 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-gradient-to-br from-brand-600 via-brand-700 to-calm-700 text-white">
-        <div className="container-narrow mx-auto text-center">
+      <section className="section-padding text-white relative overflow-hidden">
+        <div className="absolute inset-0 brand-gradient -z-10"/>
+        <div className="relative container-narrow mx-auto text-center">
           <h2 className="text-3xl lg:text-5xl font-display font-bold mb-6">
             Join 100,000+ people building a better mindset
           </h2>
@@ -187,7 +188,7 @@ export default function AboutPage() {
               href="https://apps.apple.com/us/app/selfpause-daily-affirmations/id1518538414"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-10 py-4 bg-white text-brand-700 font-semibold rounded-full text-lg hover:bg-gray-50 transition-colors shadow-lg"
+              className="inline-flex items-center justify-center px-10 py-4 bg-white text-teal-600 font-semibold rounded-full text-lg hover:bg-cream-100 transition-colors shadow-lg"
             >
               Download Free
             </a>

@@ -25,17 +25,31 @@ module.exports = {
           800: '#12152c',
           900: '#0c0e1f',
         },
+        // Selfpause brand teal — matches the logo gradient (blue-teal → cyan)
         teal: {
-          50: '#e6faf5',
-          100: '#b3f0e0',
-          200: '#80e6cc',
-          300: '#4ddcb7',
-          400: '#26d3a6',
-          500: '#14b892',
-          600: '#0fa37f',
-          700: '#0b8d6c',
-          800: '#087859',
-          900: '#055240',
+          50: '#e6f7fa',
+          100: '#b3e8f0',
+          200: '#80d9e6',
+          300: '#4dc9dc',
+          400: '#26bcd4',
+          500: '#0099B8',  // primary brand blue-teal
+          600: '#0088A8',  // darker end of logo gradient
+          700: '#007898',
+          800: '#006580',
+          900: '#004D63',
+        },
+        // Selfpause cyan — the bright end of the logo gradient
+        cyan: {
+          50: '#e0faf6',
+          100: '#b3f2e8',
+          200: '#80e9d9',
+          300: '#4de0cb',
+          400: '#26d9c0',
+          500: '#00C9B7',  // bright cyan from logo
+          600: '#00B5A4',
+          700: '#009E90',
+          800: '#00877B',
+          900: '#006B62',
         },
         brand: {
           50: '#f5f3ff',

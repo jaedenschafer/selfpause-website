@@ -98,31 +98,13 @@ export default function HomePage() {
           {/* Glass card */}
           <div className="glass-card rounded-3xl p-8 lg:p-12 max-w-5xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-              {/* Phone mockup */}
+              {/* Phone mockup — real app screenshot */}
               <div className="flex justify-center">
-                <div className="relative w-64 h-[520px] rounded-[2.5rem] bg-navy-900 shadow-2xl overflow-hidden border-4 border-navy-700">
-                  {/* Phone screen */}
-                  <div className="absolute inset-2 rounded-[2rem] overflow-hidden">
-                    <img
-                      src="https://images.unsplash.com/photo-1500534623283-312aade9b3b9?w=400&q=80"
-                      alt="Selfpause app - sunrise meditation"
-                      className="w-full h-full object-cover"
-                    />
-                    {/* Overlay content on phone */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                    <div className="absolute top-1/3 left-1/2 -translate-x-1/2 text-white text-center">
-                      <div className="text-5xl font-light tracking-wider">12:30</div>
-                    </div>
-                    <div className="absolute bottom-8 left-6 right-6 text-white">
-                      <p className="text-sm font-medium">Morning Affirmations</p>
-                      <p className="text-xs text-white/60">Your Voice</p>
-                      {/* Progress bar */}
-                      <div className="mt-3 h-0.5 bg-white/20 rounded-full">
-                        <div className="h-full w-1/3 bg-teal-400 rounded-full" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <img
+                  src="/images/selfpause-phone.png"
+                  alt="Selfpause app showing morning affirmations, ambient sounds, and meditation music"
+                  className="w-72 lg:w-80 drop-shadow-2xl"
+                />
               </div>
 
               {/* Category selection */}

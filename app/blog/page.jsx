@@ -43,11 +43,11 @@ export default function BlogPage() {
                   )}
                   <div className="p-6">
                     {post.category && (
-                      <span className="inline-block text-xs font-semibold text-brand-600 bg-brand-50 px-3 py-1 rounded-full mb-3">
+                      <span className="inline-block text-xs font-semibold text-teal-500 bg-teal-50 px-3 py-1 rounded-full mb-3">
                         {post.category}
                       </span>
                     )}
-                    <h2 className="text-xl font-display font-semibold text-gray-900 mb-2 group-hover:text-brand-600 transition-colors">
+                    <h2 className="text-xl font-display font-semibold text-gray-900 mb-2 group-hover:text-teal-500 transition-colors">
                       {post.title}
                     </h2>
                     <p className="text-gray-500 text-sm leading-relaxed mb-4 line-clamp-3">

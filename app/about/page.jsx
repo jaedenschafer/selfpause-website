@@ -185,7 +185,7 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://apps.apple.com/us/app/selfpause-daily-affirmations/id1518538414"
+              href="https://onelink.to/selfpause"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-10 py-4 bg-white text-teal-600 font-semibold rounded-full text-lg hover:bg-cream-100 transition-colors shadow-lg"

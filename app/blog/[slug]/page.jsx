@@ -89,12 +89,12 @@ export default async function BlogPost({ params }) {
               Download Selfpause and begin transforming your mindset today.
             </p>
             <a
-              href="https://apps.apple.com/us/app/selfpause-daily-affirmations/id1518538414"
+              href="https://onelink.to/selfpause"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"
             >
-              Download Selfpause Free
+              Get Started Free
             </a>
           </div>
 

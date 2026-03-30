@@ -121,22 +121,14 @@ The Selfpause app is designed to support exactly this kind of practice. Record y
           <p className="text-navy-600 mb-8">
             Download Selfpause and record Scripture-based affirmations in your own voice — free.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex items-center justify-center">
             <a
-              href="https://apps.apple.com/us/app/selfpause-daily-affirmations/id1518538414"
+              href="https://onelink.to/selfpause"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 bg-teal-500 text-white font-semibold rounded-full hover:bg-teal-600 transition-colors shadow-lg"
             >
-              Download for iOS
-            </a>
-            <a
-              href="https://play.google.com/store/apps/details?id=com.app.selfpause"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-4 text-navy-800 font-semibold rounded-full border-2 border-navy-300 hover:border-navy-500 transition-colors"
-            >
-              Get it on Android
+              Get Started Free
             </a>
           </div>
           <div className="mt-8">

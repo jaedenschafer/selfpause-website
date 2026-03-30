@@ -27,7 +27,7 @@ export default function PositivityPage() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="https://apps.apple.com/us/app/selfpause-daily-affirmations/id1518538414"
+                href="https://onelink.to/selfpause"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary text-lg px-10 py-4"
@@ -148,22 +148,14 @@ export default function PositivityPage() {
           <p className="text-xl text-white/80 max-w-xl mx-auto mb-10">
             Guided positivity sessions. Personal affirmations in your voice. AI coaching. All free to start.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex items-center justify-center">
             <a
-              href="https://apps.apple.com/us/app/selfpause-daily-affirmations/id1518538414"
+              href="https://onelink.to/selfpause"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-10 py-4 bg-white text-teal-700 font-semibold rounded-full text-lg hover:bg-cream-100 transition-colors shadow-lg"
             >
               Download Free
-            </a>
-            <a
-              href="https://play.google.com/store/apps/details?id=com.app.selfpause"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-10 py-4 text-white/90 font-semibold rounded-full text-lg border-2 border-white/30 hover:border-white/60 transition-colors"
-            >
-              Get it on Android
             </a>
           </div>
         </div>

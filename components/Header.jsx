@@ -4,11 +4,9 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 const navLinks = [
-  { href: '/affirmations', label: 'Affirmations' },
-  { href: '/meditation', label: 'Meditation' },
-  { href: '/manifestation', label: 'Manifestation' },
+  { href: '/app', label: 'App' },
   { href: '/blog', label: 'Blog' },
-  { href: '/about', label: 'About Us' },
+  { href: '/about', label: 'About' },
 ];
 
 export default function Header() {

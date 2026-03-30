@@ -73,22 +73,14 @@ export default function AppPage() {
               <p className="text-xl text-gray-500 max-w-xl mb-8 leading-relaxed">
                 Selfpause is the only affirmation app that lets you record in your own voice — the most powerful way to rewire your subconscious mind. Combine personal recordings with 1,000+ guided sessions, ambient sounds, and AI coaching.
               </p>
-              <div className="flex flex-col sm:flex-row items-start gap-4">
+              <div className="flex items-start">
                 <a
-                  href="https://apps.apple.com/us/app/selfpause-daily-affirmations/id1518538414"
+                  href="https://onelink.to/selfpause"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary text-lg px-10 py-4"
                 >
-                  Download for iOS
-                </a>
-                <a
-                  href="https://play.google.com/store/apps/details?id=com.app.selfpause"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-secondary text-lg px-10 py-4"
-                >
-                  Get it on Android
+                  Get Started Free
                 </a>
               </div>
             </div>
@@ -242,22 +234,14 @@ export default function AppPage() {
           <p className="text-xl text-white/80 max-w-xl mx-auto mb-10">
             Join hundreds of thousands of people who are transforming their mindset with the power of their own voice. Free to start, no credit card required.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex items-center justify-center">
             <a
-              href="https://apps.apple.com/us/app/selfpause-daily-affirmations/id1518538414"
+              href="https://onelink.to/selfpause"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-10 py-4 bg-white text-teal-700 font-semibold rounded-full text-lg hover:bg-cream-100 transition-colors shadow-lg"
             >
-              Download for iOS
-            </a>
-            <a
-              href="https://play.google.com/store/apps/details?id=com.app.selfpause"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-10 py-4 text-white/90 font-semibold rounded-full text-lg border-2 border-white/30 hover:border-white/60 transition-colors"
-            >
-              Get it on Android
+              Download Free
             </a>
           </div>
         </div>

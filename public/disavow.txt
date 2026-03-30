@@ -1,0 +1,14 @@
+# Google Search Console Disavow File
+# Selfpause.com — Generated March 30, 2026
+# Upload at: https://search.google.com/search-console/disavow-links
+#
+# High spam score domains identified via Moz Pro backlink audit
+
+# Scraper sites (spam score 88-95%)
+domain:healthcnn.info
+domain:healthbreaking.info
+domain:healthmed.info
+
+# Low-quality article scrapers (spam score 75-89%)
+domain:247newspro.com
+domain:abnewswire.com

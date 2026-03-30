@@ -5,6 +5,8 @@ import Link from 'next/link';
 
 const navLinks = [
   { href: '/affirmations', label: 'Affirmations' },
+  { href: '/meditation', label: 'Meditation' },
+  { href: '/manifestation', label: 'Manifestation' },
   { href: '/blog', label: 'Blog' },
   { href: '/about', label: 'About Us' },
 ];

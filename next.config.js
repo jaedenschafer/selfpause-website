@@ -8,6 +8,20 @@ const nextConfig = {
       },
     ],
   },
+  // Ensure all pages return proper 200 responses to search engine crawlers
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'index, follow',
+          },
+        ],
+      },
+    ];
+  },
   async redirects() {
     return [
       { source: '/self-love', destination: '/affirmations/affirmations-for-self-love', permanent: true },

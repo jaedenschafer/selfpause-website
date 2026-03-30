@@ -1,14 +1,23 @@
 import Link from 'next/link';
 
 const footerLinks = {
-  Product: [
+  Topics: [
     { href: '/affirmations', label: 'Affirmations' },
-    { href: 'https://apps.apple.com/us/app/selfpause-daily-affirmations/id1518538414', label: 'iOS App', external: true },
-    { href: 'https://play.google.com/store/apps/details?id=com.app.selfpause', label: 'Android App', external: true },
+    { href: '/meditation', label: 'Meditation' },
+    { href: '/manifestation', label: 'Manifestation' },
+    { href: '/mindfulness', label: 'Mindfulness' },
+    { href: '/visualization', label: 'Visualization' },
+    { href: '/positivity', label: 'Positivity' },
+    { href: '/law-of-attraction', label: 'Law of Attraction' },
+    { href: '/mantras', label: 'Mantras' },
+    { href: '/mindset', label: 'Mindset' },
   ],
   Resources: [
     { href: '/blog', label: 'Blog' },
     { href: '/about', label: 'About' },
+    { href: '/app', label: 'Download App' },
+    { href: 'https://apps.apple.com/us/app/selfpause-daily-affirmations/id1518538414', label: 'iOS App', external: true },
+    { href: 'https://play.google.com/store/apps/details?id=com.app.selfpause', label: 'Android App', external: true },
   ],
   Legal: [
     { href: '/privacy', label: 'Privacy Policy' },

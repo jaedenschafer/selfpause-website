@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Christian Affirmations: Scripture-Based Declarations of Faith | Selfpause',
+  title: 'Christian Affirmations: Scripture-Based Declarations of Faith',
   description: 'Discover powerful Christian affirmations rooted in Scripture. Learn how biblical declarations align with faith, explore verses for every area of life, and build a daily practice.',
 };
 

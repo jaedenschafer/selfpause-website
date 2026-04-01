@@ -1,6 +1,7 @@
 export const metadata = {
   title: 'Privacy Policy',
   description: 'Selfpause privacy policy — how we collect, use, and protect your personal information.',
+  robots: { index: false, follow: true },
 };
 
 export default function PrivacyPolicyPage() {

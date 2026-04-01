@@ -3,6 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'About',
   description: 'Selfpause was built to make affirmations personal, powerful, and backed by science. Learn about our mission and the team behind the app.',
+  alternates: { canonical: '/about' },
 };
 
 const values = [

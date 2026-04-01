@@ -12,8 +12,9 @@ export async function generateMetadata({ params }) {
   if (!page) return {};
 
   return {
-    title: `${page.title} | Selfpause`,
+    title: page.title,
     description: page.metaDescription,
+    alternates: { canonical: `/law-of-attraction/${params.slug}` },
     openGraph: {
       title: page.title,
       description: page.metaDescription,
@@ -27,10 +28,42 @@ export default function LawOfAttractionSubPage({ params }) {
   const page = getLawOfAttractionPage(params.slug);
   if (!page) notFound();
 
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: page.title,
+    description: page.metaDescription,
+    author: { '@type': 'Person', name: 'Jaeden Schafer' },
+    publisher: { '@type': 'Organization', name: 'Selfpause', url: 'https://selfpause.com' },
+    mainEntityOfPage: `https://selfpause.com/law-of-attraction/${params.slug}`,
+  };
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://selfpause.com' },
+      { '@type': 'ListItem', position: 2, name: 'Law of Attraction', item: 'https://selfpause.com/law-of-attraction' },
+      { '@type': 'ListItem', position: 3, name: page.title },
+    ],
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      {/* Breadcrumb */}
+      <nav aria-label="Breadcrumb" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 lg:pt-28">
+        <ol className="flex items-center gap-2 text-sm text-gray-400">
+          <li><Link href="/" className="hover:text-teal-500 transition-colors">Home</Link></li>
+          <li>/</li>
+          <li><Link href="/law-of-attraction" className="hover:text-teal-500 transition-colors">Law of Attraction</Link></li>
+          <li>/</li>
+          <li className="text-gray-600 truncate max-w-[200px]">{page.title}</li>
+        </ol>
+      </nav>
       {/* Hero */}
-      <section className="relative bg-cream-100 pt-24 pb-16 lg:pt-32 lg:pb-20">
+      <section className="relative bg-cream-100 pt-6 pb-16 lg:pt-8 lg:pb-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-teal-600 font-semibold text-sm uppercase tracking-wider mb-4">
             {page.heroSubtitle}

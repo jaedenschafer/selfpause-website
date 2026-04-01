@@ -2,8 +2,9 @@ import Link from 'next/link';
 import { getAllMindfulnessSlugs, getMindfulnessPage } from '../../lib/mindfulness';
 
 export const metadata = {
-  title: 'Mindfulness Guide — Techniques, Research & Practices | Selfpause',
+  title: 'Mindfulness Guide — Techniques, Research & Practices',
   description: 'Explore evidence-based mindfulness techniques, exercises, and practices. Learn from MBSR research, Jon Kabat-Zinn\'s methods, and clinical studies. Start your mindfulness journey today.',
+  alternates: { canonical: '/mindfulness' },
 };
 
 const topics = getAllMindfulnessSlugs().map((slug) => {

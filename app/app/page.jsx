@@ -3,6 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Download Selfpause: Daily Affirmations & AI Life Coach App',
   description: 'Download Selfpause — the #1 affirmation app. Record affirmations in your own voice, listen to guided sessions, layer ambient sounds, and get personalized AI coaching. Free on iOS and Android.',
+  alternates: { canonical: '/app' },
 };
 
 const features = [

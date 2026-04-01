@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'How to Meditate: A Complete Beginner\'s Guide | Selfpause',
+  title: 'How to Meditate: A Complete Beginner\'s Guide',
   description: 'Learn how to meditate with this step-by-step guide for beginners. Discover different meditation techniques, tips for building a consistent practice, and how ambient sounds enhance your experience.',
 };
 

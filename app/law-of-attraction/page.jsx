@@ -2,8 +2,9 @@ import Link from 'next/link';
 import { getAllLawOfAttractionSlugs, getLawOfAttractionPage } from '../../lib/law-of-attraction';
 
 export const metadata = {
-  title: 'Law of Attraction: History, Science & Practical Exercises | Selfpause',
+  title: 'Law of Attraction: History, Science & Practical Exercises',
   description: 'Explore the law of attraction — its history, the science behind it, practical manifestation exercises, and how gratitude and letting go play key roles. Evidence-based guides.',
+  alternates: { canonical: '/law-of-attraction' },
 };
 
 const topics = getAllLawOfAttractionSlugs().map((slug) => {

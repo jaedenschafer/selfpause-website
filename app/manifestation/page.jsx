@@ -2,8 +2,9 @@ import Link from 'next/link';
 import { getAllManifestationSlugs, getManifestationPage } from '../../lib/manifestation';
 
 export const metadata = {
-  title: 'Manifestation Guide: Science, Spirituality & Practical Techniques | Selfpause',
+  title: 'Manifestation Guide: Science, Spirituality & Practical Techniques',
   description: 'Explore the truth about manifestation — from scientific research and writing techniques to religious perspectives across Christianity, Islam, and more. Evidence-based guides for every question.',
+  alternates: { canonical: '/manifestation' },
 };
 
 const topics = getAllManifestationSlugs().map((slug) => {

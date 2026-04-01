@@ -3,6 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Affirmations',
   description: 'Explore thousands of guided affirmations across every category — confidence, anxiety, wealth, relationships, sleep, and more. Record your own or listen to professionally crafted sessions.',
+  alternates: { canonical: '/affirmations' },
 };
 
 const categories = [

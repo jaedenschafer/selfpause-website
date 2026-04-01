@@ -2,8 +2,9 @@ import Link from 'next/link';
 import { getAllVisualizationSlugs, getVisualizationPage } from '../../lib/visualization';
 
 export const metadata = {
-  title: 'Visualization Techniques & Guided Imagery | Selfpause',
+  title: 'Visualization Techniques & Guided Imagery',
   description: 'Explore the science of visualization — techniques, skills, and health benefits of guided imagery. Learn how mental imagery can transform your performance, health, and wellbeing.',
+  alternates: { canonical: '/visualization' },
 };
 
 const topics = getAllVisualizationSlugs().map((slug) => {

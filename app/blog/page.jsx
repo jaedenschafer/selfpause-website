@@ -4,6 +4,7 @@ import { getAllPosts } from '../../lib/blog';
 export const metadata = {
   title: 'Blog',
   description: 'Insights on affirmations, meditation, mindset, and personal growth from the Selfpause team.',
+  alternates: { canonical: '/blog' },
 };
 
 export default function BlogPage() {

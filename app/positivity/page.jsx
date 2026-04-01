@@ -2,8 +2,9 @@ import Link from 'next/link';
 import { getAllPositivitySlugs, getPositivityPage } from '../../lib/positivity';
 
 export const metadata = {
-  title: 'Positivity: Body Image, Mindset Tips & the Science of Optimism | Selfpause',
+  title: 'Positivity: Body Image, Mindset Tips & the Science of Optimism',
   description: 'Explore the science of positivity — from body positivity and practical mindset tips to the psychology of optimism. Research-backed guides to help you build a more positive life.',
+  alternates: { canonical: '/positivity' },
 };
 
 const topics = getAllPositivitySlugs().map((slug) => {

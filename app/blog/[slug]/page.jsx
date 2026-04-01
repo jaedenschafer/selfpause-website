@@ -11,6 +11,7 @@ export async function generateMetadata({ params }) {
   return {
     title: post.title,
     description: post.excerpt,
+    alternates: { canonical: `/blog/${params.slug}` },
     openGraph: {
       title: post.title,
       description: post.excerpt,
@@ -24,18 +25,49 @@ export async function generateMetadata({ params }) {
 export default async function BlogPost({ params }) {
   const post = await getPostBySlug(params.slug);
 
+  const blogJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    author: {
+      '@type': 'Person',
+      name: post.author || 'Jaeden Schafer',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Selfpause',
+      url: 'https://selfpause.com',
+    },
+    mainEntityOfPage: `https://selfpause.com/blog/${params.slug}`,
+    ...(post.image && { image: post.image }),
+  };
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://selfpause.com' },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://selfpause.com/blog' },
+      { '@type': 'ListItem', position: 3, name: post.title },
+    ],
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <article className="section-padding bg-white">
         <div className="max-w-3xl mx-auto">
           {/* Breadcrumb */}
-          <div className="flex items-center gap-2 text-sm text-gray-400 mb-8">
+          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-gray-400 mb-8">
             <Link href="/" className="hover:text-teal-500 transition-colors">Home</Link>
             <span>/</span>
             <Link href="/blog" className="hover:text-teal-500 transition-colors">Blog</Link>
             <span>/</span>
             <span className="text-gray-600">{post.title}</span>
-          </div>
+          </nav>
 
           {/* Header */}
           <header className="mb-12">

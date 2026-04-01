@@ -1,6 +1,7 @@
 export const metadata = {
   title: 'Terms of Service',
   description: 'Selfpause terms of service — the rules and guidelines for using our app and website.',
+  robots: { index: false, follow: true },
 };
 
 export default function TermsOfServicePage() {

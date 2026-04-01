@@ -2,8 +2,9 @@ import Link from 'next/link';
 import { getAllMeditationSlugs, getMeditationPage } from '../../lib/meditation';
 
 export const metadata = {
-  title: 'Meditation Guides & Resources | Selfpause',
+  title: 'Meditation Guides & Resources',
   description: 'Explore expert meditation guides covering techniques, equipment, anxiety relief, retreats, sleep, and more. Evidence-based resources to deepen your meditation practice.',
+  alternates: { canonical: '/meditation' },
 };
 
 const guides = [

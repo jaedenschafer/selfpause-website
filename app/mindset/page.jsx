@@ -1,8 +1,9 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Mindset: The Science of How Your Thinking Shapes Your Life | Selfpause',
+  title: 'Mindset: The Science of How Your Thinking Shapes Your Life',
   description: 'Explore the science of mindset — growth vs. fixed mindset, Carol Dweck\'s research, and how your beliefs shape health, success, and mental wellbeing. Build a stronger mindset today.',
+  alternates: { canonical: '/mindset' },
 };
 
 const guides = [

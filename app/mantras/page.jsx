@@ -1,8 +1,9 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Mantras: Ancient Sound Practices for Modern Life | Selfpause',
+  title: 'Mantras: Ancient Sound Practices for Modern Life',
   description: 'Explore the power of mantras — from Vedic chanting to mindfulness meditation. Learn different types of mantras, how to practice, and the science behind why they work.',
+  alternates: { canonical: '/mantras' },
 };
 
 const guides = [

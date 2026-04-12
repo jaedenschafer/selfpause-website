@@ -11,6 +11,7 @@ const CATEGORY_COLORS = {
   'health':       { bg: 'bg-emerald-50',  border: 'border-emerald-300', accent: 'text-emerald-600', pill: 'bg-emerald-100 text-emerald-700' },
   'wealth':       { bg: 'bg-yellow-50',   border: 'border-yellow-300',  accent: 'text-yellow-600',  pill: 'bg-yellow-100 text-yellow-700' },
   'career':       { bg: 'bg-indigo-50',   border: 'border-indigo-300',  accent: 'text-indigo-600',  pill: 'bg-indigo-100 text-indigo-700' },
+  'family':        { bg: 'bg-orange-50',    border: 'border-orange-300',  accent: 'text-orange-600',  pill: 'bg-orange-100 text-orange-700' },
   'relationships':{ bg: 'bg-rose-50',     border: 'border-rose-300',    accent: 'text-rose-600',    pill: 'bg-rose-100 text-rose-700' },
   'gratitude':    { bg: 'bg-orange-50',   border: 'border-orange-300',  accent: 'text-orange-600',  pill: 'bg-orange-100 text-orange-700' },
   'morning':      { bg: 'bg-amber-50',    border: 'border-amber-300',   accent: 'text-amber-600',   pill: 'bg-amber-100 text-amber-700' },

@@ -13,6 +13,7 @@ const footerLinks = {
     { href: '/mindset', label: 'Mindset' },
   ],
   Resources: [
+    { href: '/positive-affirmation-generator', label: 'Affirmation Generator' },
     { href: '/blog', label: 'Blog' },
     { href: '/about', label: 'About' },
     { href: '/app', label: 'Download App' },

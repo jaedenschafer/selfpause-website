@@ -324,14 +324,40 @@ export default function PositiveAffirmationGenerator() {
 
   return (
     <>
-      {/* JSON-LD */}
+      {/* JSON-LD: WebApplication + FAQPage + BreadcrumbList */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context': 'https://schema.org', '@type': 'WebApplication',
-        name: 'Positive Affirmation Generator', url: 'https://selfpause.com/positive-affirmation-generator',
-        description: 'Generate personalized positive affirmations for any area of your life. Free tool by Selfpause.',
-        applicationCategory: 'HealthApplication', operatingSystem: 'All',
-        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-        creator: { '@type': 'Organization', name: 'Selfpause', url: 'https://selfpause.com' },
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'WebApplication',
+            name: 'Positive Affirmation Generator',
+            url: 'https://selfpause.com/positive-affirmation-generator',
+            description: 'Generate personalized positive affirmations for any area of your life. Choose from 31 categories covering self-love, confidence, anxiety, family, career, and more. Completely free with no sign-up required.',
+            applicationCategory: 'HealthApplication',
+            operatingSystem: 'All',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+            creator: { '@type': 'Organization', name: 'Selfpause', url: 'https://selfpause.com' },
+            featureList: 'Generate personalized affirmations, Save favorites, Text-to-speech, Share as images, Print-friendly, 31 life categories, 2000+ affirmations',
+          },
+          {
+            '@type': 'FAQPage',
+            mainEntity: [
+              { '@type': 'Question', name: 'How do positive affirmations work?', acceptedAnswer: { '@type': 'Answer', text: 'Positive affirmations work by leveraging neuroplasticity — your brain\'s ability to form new neural connections. When you repeat a positive statement consistently, your brain begins to treat it as a belief rather than just words, gradually shifting your thought patterns and behavior.' }},
+              { '@type': 'Question', name: 'How many affirmations should I practice daily?', acceptedAnswer: { '@type': 'Answer', text: 'We recommend focusing on 3-5 affirmations that deeply resonate with you. Quality matters more than quantity. Choose affirmations that feel challenging but believable.' }},
+              { '@type': 'Question', name: 'When is the best time to say affirmations?', acceptedAnswer: { '@type': 'Answer', text: 'The most effective times are right after waking up and just before sleep, when your mind is most receptive. However, any consistent practice time works.' }},
+              { '@type': 'Question', name: 'Can I use this generator for free?', acceptedAnswer: { '@type': 'Answer', text: 'Yes! This positive affirmation generator is completely free with no sign-up required. You can generate as many sets of affirmations as you like across all 31 categories, save your favorites, listen with text-to-speech, and share as beautiful images.' }},
+              { '@type': 'Question', name: 'How can I make affirmations more effective?', acceptedAnswer: { '@type': 'Answer', text: 'The most powerful way to practice affirmations is to hear them in your own voice. The Selfpause app lets you record your affirmations, layer them with calming ambient sounds, and listen daily — creating a deeply personal and immersive experience.' }},
+              { '@type': 'Question', name: 'Can I save my favorite affirmations?', acceptedAnswer: { '@type': 'Answer', text: 'Yes! Tap the heart icon on any affirmation to save it to your personal collection. Your saved affirmations persist between visits so you can build a curated list.' }},
+            ],
+          },
+          {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://selfpause.com' },
+              { '@type': 'ListItem', position: 2, name: 'Positive Affirmation Generator', item: 'https://selfpause.com/positive-affirmation-generator' },
+            ],
+          },
+        ],
       })}} />
 
       {/* Print styles */}
@@ -418,7 +444,7 @@ export default function PositiveAffirmationGenerator() {
       )}
 
       {/* ── HERO ── */}
-      <section className="relative overflow-hidden no-print">
+      <section className="relative overflow-hidden no-print" aria-label="Affirmation generator tool">
         <div className="absolute inset-0 brand-gradient opacity-[0.05]" />
         <div className="absolute top-20 right-10 w-72 h-72 rounded-full bg-cyan-200 opacity-15 blur-3xl animate-pulse" style={{ animationDuration: '4s' }} />
         <div className="absolute bottom-10 left-10 w-96 h-96 rounded-full bg-teal-200 opacity-15 blur-3xl animate-pulse" style={{ animationDuration: '6s' }} />
@@ -512,7 +538,7 @@ export default function PositiveAffirmationGenerator() {
                   <button
                     key={cat.id}
                     onClick={() => handleCategoryClick(cat.id)}
-                    className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium
+                    className={`inline-flex items-center gap-1 sm:gap-1.5 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium
                              transition-all duration-200 border
                              ${activeCategory === cat.id
                                ? 'bg-teal-600 text-white border-teal-600 shadow-md scale-105'
@@ -531,7 +557,7 @@ export default function PositiveAffirmationGenerator() {
 
       {/* ── RESULTS ── */}
       {results && (
-        <section ref={resultsRef} className="section-padding bg-white scroll-mt-20">
+        <section ref={resultsRef} className="section-padding bg-white scroll-mt-20" aria-label="Generated affirmations results">
           <div className="container-narrow">
             {/* Results Header */}
             <div className="text-center mb-8">
@@ -620,54 +646,36 @@ export default function PositiveAffirmationGenerator() {
                 const colors = getCardColors(affirmation.tags);
                 const catEmoji = CATEGORIES.find(c => c.id === affirmation.tags[0])?.icon || '';
                 return (
-                  <div
+                  <article
                     key={`${affirmation.text}-${index}`}
-                    className={`group relative ${colors.bg} rounded-xl p-5 border-l-4 ${colors.border}
+                    className={`group relative ${colors.bg} rounded-xl p-4 sm:p-5 border-l-4 ${colors.border}
                              hover:shadow-lg hover:scale-[1.01] transition-all duration-300
                              animate-fade-in-up print-card`}
                     style={{ animationDelay: `${Math.min(index * 40, 600)}ms`, opacity: 0 }}
+                    itemScope itemType="https://schema.org/Quotation"
                   >
-                    <div className="flex items-start justify-between gap-2">
-                      <p className="text-navy-700 leading-relaxed font-medium text-[15px] flex-1">
-                        &ldquo;{affirmation.text}&rdquo;
-                      </p>
-                      {/* Action buttons - visible on hover (desktop) or always (mobile) */}
-                      <div className="flex-shrink-0 flex flex-col gap-1 opacity-100 sm:opacity-0 group-hover:opacity-100 transition-opacity duration-200 no-print">
-                        <button
-                          onClick={() => toggleFavorite(affirmation)}
-                          className={`p-1.5 rounded-lg transition-colors ${isFavorited(affirmation.text) ? 'text-red-500 bg-red-50' : 'text-navy-300 hover:text-red-500 hover:bg-red-50'}`}
-                          title={isFavorited(affirmation.text) ? 'Remove from saved' : 'Save affirmation'}
-                        >
+                    <p className="text-navy-700 leading-relaxed font-medium text-[15px]" itemProp="text">
+                      &ldquo;{affirmation.text}&rdquo;
+                    </p>
+                    {/* Action bar — horizontal row, always visible on mobile, hover on desktop */}
+                    <div className="flex items-center justify-between mt-3">
+                      <span className="text-xs text-navy-300 font-medium">#{index + 1} {catEmoji}</span>
+                      <div className="flex items-center gap-0.5 sm:gap-1 opacity-100 sm:opacity-0 group-hover:opacity-100 transition-opacity duration-200 no-print">
+                        <button onClick={() => toggleFavorite(affirmation)} className={`p-1.5 rounded-lg transition-colors ${isFavorited(affirmation.text) ? 'text-red-500 bg-red-50' : 'text-navy-300 hover:text-red-500 hover:bg-red-50'}`} aria-label={isFavorited(affirmation.text) ? 'Remove from saved' : 'Save affirmation'}>
                           <HeartIcon className="w-4 h-4" filled={isFavorited(affirmation.text)} />
                         </button>
-                        <button
-                          onClick={() => copyToClipboard(affirmation.text, index)}
-                          className="p-1.5 rounded-lg text-navy-300 hover:text-teal-600 hover:bg-teal-50 transition-colors"
-                          title="Copy"
-                        >
+                        <button onClick={() => copyToClipboard(affirmation.text, index)} className="p-1.5 rounded-lg text-navy-300 hover:text-teal-600 hover:bg-teal-50 transition-colors" aria-label="Copy affirmation">
                           {copiedIndex === index ? <CheckIcon className="w-4 h-4 text-green-600" /> : <CopyIcon className="w-4 h-4" />}
                         </button>
-                        <button
-                          onClick={() => handleSpeak(affirmation.text, index)}
-                          className={`p-1.5 rounded-lg transition-colors ${speakingIndex === index ? 'text-teal-600 bg-teal-50' : 'text-navy-300 hover:text-teal-600 hover:bg-teal-50'}`}
-                          title={speakingIndex === index ? 'Stop' : 'Listen'}
-                        >
+                        <button onClick={() => handleSpeak(affirmation.text, index)} className={`p-1.5 rounded-lg transition-colors ${speakingIndex === index ? 'text-teal-600 bg-teal-50' : 'text-navy-300 hover:text-teal-600 hover:bg-teal-50'}`} aria-label={speakingIndex === index ? 'Stop listening' : 'Listen aloud'}>
                           {speakingIndex === index ? <PauseIcon className="w-3.5 h-3.5" /> : <PlayIcon className="w-3.5 h-3.5" />}
                         </button>
-                        <button
-                          onClick={() => handleShare(affirmation.text)}
-                          className="p-1.5 rounded-lg text-navy-300 hover:text-indigo-600 hover:bg-indigo-50 transition-colors"
-                          title="Share as image"
-                        >
+                        <button onClick={() => handleShare(affirmation.text)} className="p-1.5 rounded-lg text-navy-300 hover:text-indigo-600 hover:bg-indigo-50 transition-colors" aria-label="Share as image">
                           <ShareIcon className="w-4 h-4" />
                         </button>
                       </div>
                     </div>
-                    <div className="flex items-center justify-between mt-3">
-                      <span className="text-xs text-navy-300 font-medium">#{index + 1}</span>
-                      <span className="text-xs">{catEmoji}</span>
-                    </div>
-                  </div>
+                  </article>
                 );
               })}
             </div>
@@ -709,11 +717,11 @@ export default function PositiveAffirmationGenerator() {
         <div className="container-narrow">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-4">How the Affirmation Generator Works</h2>
-            <p className="text-lg text-navy-500 max-w-2xl mx-auto">Our generator draws from a library of over 2,000 carefully crafted affirmations, intelligently matched to your specific needs.</p>
+            <p className="text-lg text-navy-500 max-w-2xl mx-auto">Our generator draws from a library of over 2,300 carefully crafted affirmations across 31 categories, intelligently matched to your specific needs.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { step: '1', title: 'Choose Your Focus', desc: 'Type a topic or pick from 30 curated categories covering every area of life.' },
+              { step: '1', title: 'Choose Your Focus', desc: 'Type a topic or pick from 31 curated categories covering every area of life.' },
               { step: '2', title: 'Set Your Count', desc: 'Choose 5, 10, 25, or 50 affirmations depending on how deep you want to go.' },
               { step: '3', title: 'Save Your Favorites', desc: 'Heart the affirmations that resonate most. They are saved to your personal collection.' },
               { step: '4', title: 'Listen, Share & Practice', desc: 'Listen aloud with text-to-speech, share as beautiful images, or print for daily use.' },
@@ -749,8 +757,8 @@ export default function PositiveAffirmationGenerator() {
               </ul>
 
               <h3 className="text-2xl font-bold text-navy-900 mt-10 mb-4">Categories We Cover</h3>
-              <p>Our positive affirmation generator covers 30 life areas including self-love, confidence, anxiety and stress relief, health and healing, wealth and abundance, career success, relationships, gratitude, morning motivation, evening relaxation, body image, inner peace, creativity, focus, sleep, energy, self-worth, courage, patience, mindfulness, personal growth, forgiveness, letting go, trust, joy, purpose, and communication.</p>
-              <p>Whether you&apos;re looking for affirmations for a specific challenge or general daily positivity, our tool matches you with the most relevant affirmations from our curated library of over 2,000 unique statements.</p>
+              <p>Our positive affirmation generator covers 31 life areas including self-love, confidence, anxiety and stress relief, health and healing, wealth and abundance, career success, family and parenting, relationships, gratitude, morning motivation, evening relaxation, body image, inner peace, creativity, focus, sleep, energy, self-worth, courage, patience, mindfulness, personal growth, forgiveness, letting go, trust, joy, purpose, and communication.</p>
+              <p>Whether you&apos;re looking for affirmations for a specific challenge or general daily positivity, our tool matches you with the most relevant affirmations from our curated library of over 2,300 unique statements.</p>
             </div>
           </div>
         </div>

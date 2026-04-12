@@ -178,6 +178,14 @@ export default function sitemap() {
     ...mantraUrls,
     ...mindsetUrls,
 
+    // Tools
+    {
+      url: `${baseUrl}/positive-affirmation-generator`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+
     // Static content pages
     {
       url: `${baseUrl}/meditation/how-to-meditate`,

@@ -1,0 +1,84 @@
+import Link from 'next/link';
+
+export default function SeoPage({ page, backLink, backLabel }) {
+  return (
+    <>
+      {/* Hero */}
+      <section className="relative bg-cream-100 pt-24 pb-16 lg:pt-32 lg:pb-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-teal-600 font-semibold text-sm uppercase tracking-wider mb-4">
+            {page.heroSubtitle}
+          </p>
+          <h1 className="font-serif text-4xl lg:text-5xl font-bold text-navy-900 mb-6 leading-tight">
+            {page.title}
+          </h1>
+          <p className="text-lg text-navy-600 max-w-2xl mx-auto leading-relaxed">
+            {page.intro}
+          </p>
+        </div>
+      </section>
+
+      {/* Content */}
+      <article className="py-16 lg:py-24 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          {page.sections.map((section, i) => (
+            <div key={i}>
+              {i > 0 && <div className="mt-12" />}
+              <h2 className="font-serif text-2xl lg:text-3xl font-bold text-navy-900 mb-4">
+                {section.heading}
+              </h2>
+              <p className="text-navy-700 text-lg leading-relaxed whitespace-pre-line">
+                {section.content}
+              </p>
+
+              {i === 2 && page.bannerAd && (
+                <div className="my-12 rounded-2xl bg-gradient-to-r from-teal-500 to-teal-600 p-8 text-center shadow-lg">
+                  <p className="text-white text-lg font-medium leading-relaxed mb-5">
+                    {page.bannerAd}
+                  </p>
+                  <a
+                    href="https://onelink.to/selfpause"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center px-8 py-3 bg-white text-teal-600 font-semibold rounded-full hover:bg-cream-100 transition-colors shadow-md"
+                  >
+                    Get Started Free
+                  </a>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </article>
+
+      {/* CTA */}
+      <section className="py-16 lg:py-20 bg-cream-200">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="font-serif text-3xl lg:text-4xl font-bold text-navy-900 mb-4">
+            {page.cta}
+          </h2>
+          <p className="text-navy-600 mb-8">
+            Download Selfpause and start building a personalized affirmation practice — free.
+          </p>
+          <div className="flex items-center justify-center">
+            <a
+              href="https://onelink.to/selfpause"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-8 py-4 bg-teal-500 text-white font-semibold rounded-full hover:bg-teal-600 transition-colors shadow-lg"
+            >
+              Get Started Free
+            </a>
+          </div>
+          {backLink && (
+            <div className="mt-8">
+              <Link href={backLink} className="text-teal-600 hover:text-teal-700 font-medium">
+                {backLabel || '← Back'}
+              </Link>
+            </div>
+          )}
+        </div>
+      </section>
+    </>
+  );
+}

@@ -38,6 +38,9 @@ export const metadata = {
   alternates: {
     canonical: 'https://selfpause.com',
   },
+  verification: {
+    google: 'QNSEuKYET1mWMR1xSEhgZxEkENl9bF2OwOyTiUSPxQM',
+  },
 };
 
 const jsonLd = {

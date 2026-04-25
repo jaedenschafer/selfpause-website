@@ -11,6 +11,7 @@ const footerLinks = {
     { href: '/law-of-attraction', label: 'Law of Attraction' },
     { href: '/mantras', label: 'Mantras' },
     { href: '/mindset', label: 'Mindset' },
+    { href: '/christian-affirmations', label: 'Christian Affirmations' },
   ],
   Resources: [
     { href: '/positive-affirmation-generator', label: 'Affirmation Generator' },

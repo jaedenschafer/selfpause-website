@@ -52,10 +52,10 @@ const features = [
 ];
 
 const stats = [
-  { number: '500K+', label: 'Downloads' },
-  { number: '4.8', label: 'App Store Rating' },
+  { number: '150K+', label: 'Active Users' },
+  { number: '4.6', label: 'App Store Rating' },
   { number: '1,000+', label: 'Guided Sessions' },
-  { number: '50+', label: 'Categories' },
+  { number: '31', label: 'Categories' },
 ];
 
 export default function AppPage() {
@@ -74,7 +74,7 @@ export default function AppPage() {
               <p className="text-xl text-gray-500 max-w-xl mb-8 leading-relaxed">
                 Selfpause is the only affirmation app that lets you record in your own voice — the most powerful way to rewire your subconscious mind. Combine personal recordings with 1,000+ guided sessions, ambient sounds, and AI coaching.
               </p>
-              <div className="flex items-start">
+              <div className="flex flex-col sm:flex-row items-start gap-4 mb-6">
                 <a
                   href="https://onelink.to/selfpause"
                   target="_blank"
@@ -84,24 +84,41 @@ export default function AppPage() {
                   Get Started Free
                 </a>
               </div>
+              <div className="flex flex-wrap items-center gap-3">
+                <a
+                  href="https://apps.apple.com/us/app/selfpause-daily-affirmations/id1518538414"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Download Selfpause on the App Store"
+                  className="inline-block transition-transform hover:scale-[1.02]"
+                >
+                  <img
+                    src="/images/badge-app-store.svg"
+                    alt="Download on the App Store"
+                    className="h-12 w-auto"
+                  />
+                </a>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.app.selfpause"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Get Selfpause on Google Play"
+                  className="inline-block transition-transform hover:scale-[1.02]"
+                >
+                  <img
+                    src="/images/badge-google-play.png"
+                    alt="Get it on Google Play"
+                    className="h-12 w-auto"
+                  />
+                </a>
+              </div>
             </div>
             <div className="relative flex justify-center">
-              <div className="relative w-72 lg:w-80">
-                <div className="aspect-[9/19] rounded-[2.5rem] overflow-hidden shadow-2xl bg-gradient-to-b from-teal-400 to-teal-600 flex items-center justify-center">
-                  <div className="text-center text-white p-8">
-                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="mx-auto mb-4 opacity-80">
-                      <path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/>
-                      <path d="M19 10v2a7 7 0 01-14 0v-2"/>
-                      <line x1="12" y1="19" x2="12" y2="23"/>
-                      <line x1="8" y1="23" x2="16" y2="23"/>
-                    </svg>
-                    <p className="text-lg font-display font-semibold">Selfpause</p>
-                    <p className="text-sm text-white/70 mt-1">Daily Affirmations</p>
-                  </div>
-                </div>
-                <div className="absolute -bottom-4 -right-4 w-40 h-40 bg-teal-200/30 rounded-full blur-3xl -z-10"/>
-                <div className="absolute -top-4 -left-4 w-32 h-32 bg-purple-200/20 rounded-full blur-2xl -z-10"/>
-              </div>
+              <img
+                src="/images/selfpause-phone.png"
+                alt="Selfpause app showing daily affirmations and ambient sounds"
+                className="w-72 lg:w-96 drop-shadow-2xl"
+              />
             </div>
           </div>
         </div>
@@ -235,7 +252,7 @@ export default function AppPage() {
           <p className="text-xl text-white/80 max-w-xl mx-auto mb-10">
             Join hundreds of thousands of people who are transforming their mindset with the power of their own voice. Free to start, no credit card required.
           </p>
-          <div className="flex items-center justify-center">
+          <div className="flex flex-col items-center gap-6">
             <a
               href="https://onelink.to/selfpause"
               target="_blank"
@@ -244,6 +261,26 @@ export default function AppPage() {
             >
               Download Free
             </a>
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              <a
+                href="https://apps.apple.com/us/app/selfpause-daily-affirmations/id1518538414"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Download Selfpause on the App Store"
+                className="inline-block transition-transform hover:scale-[1.02]"
+              >
+                <img src="/images/badge-app-store.svg" alt="Download on the App Store" className="h-12 w-auto" />
+              </a>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.app.selfpause"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Get Selfpause on Google Play"
+                className="inline-block transition-transform hover:scale-[1.02]"
+              >
+                <img src="/images/badge-google-play.png" alt="Get it on Google Play" className="h-12 w-auto" />
+              </a>
+            </div>
           </div>
         </div>
       </section>

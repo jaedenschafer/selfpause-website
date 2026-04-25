@@ -47,7 +47,7 @@ const jsonLd = {
       url: 'https://selfpause.com',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://selfpause.com/images/selfpause-phone-hero.webp',
+        url: 'https://selfpause.com/images/selfpause-logo.png',
       },
       sameAs: [
         'https://www.instagram.com/selfpause/',
@@ -77,7 +77,7 @@ const jsonLd = {
       },
       aggregateRating: {
         '@type': 'AggregateRating',
-        ratingValue: '4.8',
+        ratingValue: '4.6',
         ratingCount: '2000',
         bestRating: '5',
       },

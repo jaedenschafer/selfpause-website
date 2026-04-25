@@ -57,7 +57,8 @@ const milestones = [
   { year: '2022', text: 'Ambient sounds library and meditation music added. Available in 5 languages.' },
   { year: '2023', text: '50,000 users. Android version launches on Google Play.' },
   { year: '2024', text: 'AI Life Coach feature launches. Selfpause surpasses 100,000 downloads.' },
-  { year: '2025', text: '1,000+ guided affirmations across 20+ categories. Rated 4.8 on the App Store.' },
+  { year: '2025', text: '1,000+ guided affirmations across 31 categories. Rated 4.6 on the App Store.' },
+  { year: '2026', text: 'Selfpause community grows past 150,000 users. Free Positive Affirmation Generator launches with 2,000+ affirmations.' },
 ];
 
 export default function AboutPage() {
@@ -87,7 +88,7 @@ export default function AboutPage() {
               <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-xl">
                 <img
                   src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80"
-                  alt="The Selfpause team collaborating"
+                  alt="Two people working together at a laptop"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -105,7 +106,7 @@ export default function AboutPage() {
                   The research was clear: affirmations work best when they're personal and spoken in your own voice. But no app made that easy. So Jaeden built one.
                 </p>
                 <p>
-                  What started as a simple recording tool has grown into a complete mental wellness platform — with thousands of guided sessions, an AI life coach, ambient soundscapes, and a community of over 100,000 people who've made affirmations a daily habit.
+                  What started as a simple recording tool has grown into a complete mental wellness platform — with 1,000+ guided sessions, an AI life coach, ambient soundscapes, and a community of over 150,000 people who've made affirmations a daily habit.
                 </p>
                 <p>
                   We're still a small, passionate team. And we still believe the same thing we believed on day one: the voice that matters most is yours.
@@ -179,7 +180,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 brand-gradient -z-10"/>
         <div className="relative container-narrow mx-auto text-center">
           <h2 className="text-3xl lg:text-5xl font-display font-bold mb-6">
-            Join 100,000+ people building a better mindset
+            Join 150,000+ people building a better mindset
           </h2>
           <p className="text-xl text-white/80 max-w-xl mx-auto mb-10">
             Download Selfpause and start your journey today. Free to use. No credit card required.

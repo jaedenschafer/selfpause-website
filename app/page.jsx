@@ -8,10 +8,10 @@ const voices = [
 ];
 
 const sessions = [
-  { title: 'Millionaire Mindset', image: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=400&q=80' },
-  { title: 'Manifesting Success', image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&q=80' },
-  { title: 'Athletic Mindset', image: 'https://images.unsplash.com/photo-1517963879433-6ad2b056d712?w=400&q=80' },
-  { title: "Children's Confidence", image: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&q=80' },
+  { title: 'Millionaire Mindset', href: '/affirmations/money-affirmations', image: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=400&q=80' },
+  { title: 'Manifesting Success', href: '/manifestation', image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&q=80' },
+  { title: 'Athletic Mindset', href: '/affirmations/athletic-affirmations', image: 'https://images.unsplash.com/photo-1517963879433-6ad2b056d712?w=400&q=80' },
+  { title: "Children's Confidence", href: '/affirmations/affirmations-for-self-love', image: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&q=80' },
 ];
 
 const steps = [
@@ -180,10 +180,10 @@ export default function HomePage() {
           <div className="text-center max-w-3xl mx-auto mb-14">
             <p className="text-sm font-semibold uppercase tracking-widest text-teal-500 mb-3">Guided Voices</p>
             <h2 className="text-3xl lg:text-5xl font-bold text-navy-900 mb-5" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
-              Or listen to our guided affirmation voices
+              Or choose from our guided affirmation voices
             </h2>
             <p className="text-lg text-navy-500 leading-relaxed">
-              Not ready to record your own? Choose from our library of guided affirmation sessions read by professional voices.
+              Not ready to record your own? Pick a voice you connect with and stream guided affirmation sessions inside the app.
             </p>
           </div>
 
@@ -268,7 +268,7 @@ export default function HomePage() {
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {sessions.map((s) => (
-              <div key={s.title} className="group cursor-pointer">
+              <Link key={s.title} href={s.href} className="group">
                 <div className="aspect-square rounded-2xl overflow-hidden shadow-md mb-4">
                   <img
                     src={s.image}
@@ -279,7 +279,7 @@ export default function HomePage() {
                 <h3 className="text-center font-semibold text-navy-800 group-hover:text-teal-500 transition-colors">
                   {s.title}
                 </h3>
-              </div>
+              </Link>
             ))}
           </div>
 

@@ -38,16 +38,8 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Right side: Login + Download + Store Badges */}
+          {/* Right side: Download */}
           <div className="hidden md:flex items-center gap-4">
-            <a
-              href="https://app.selfpause.com/login"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-medium text-navy-600 hover:text-teal-500 transition-colors"
-            >
-              Login
-            </a>
             <a
               href="https://onelink.to/selfpause"
               target="_blank"
@@ -90,15 +82,6 @@ export default function Header() {
                   {link.label}
                 </Link>
               ))}
-              <a
-                href="https://app.selfpause.com/login"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setMobileOpen(false)}
-                className="px-4 py-3 text-base font-medium text-navy-700 hover:text-teal-500 hover:bg-cream-100 rounded-xl transition-colors"
-              >
-                Login
-              </a>
               <div className="mt-4 px-4 flex flex-col gap-3">
                 <a
                   href="https://onelink.to/selfpause"
